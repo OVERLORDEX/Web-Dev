@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mona Sans", system-ui, sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #1f2328;
+}
+
+.page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+}
+
+.top-block {
+    text-align: center;
+    padding: 96px 0 60px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.main-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.main-text {
+    font-size: 1.1rem;
+    color: #57606a;
+    margin-bottom: 32px;
+}
+
+.main-action {
+    display: inline-block;
+    background: #1f2328;
+    color: #fff;
+    padding: 14px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.plans-area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.plan-box {
+    border: 1px solid #d0d7de;
+    border-radius: 12px;
+    padding: 32px;
+    background: #fff;
+}
+
+.plan-main {
+    border: 2px solid #0969da;
+    position: relative;
+}
+
+.mark {
+    position: absolute;
+    top: -14px;
+    right: 20px;
+    background: #0969da;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+}
+
+.plan-desc {
+    color: #57606a;
+    font-size: 0.95rem;
+}
+
+.cost {
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+.cost-note {
+    font-size: 0.85rem;
+    color: #57606a;
+    margin-left: 6px;
+}
+
+.plan-list {
+    list-style: none;
+    margin-top: 24px;
+}
+
+.plan-list li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.btn-dark {
+    display: inline-block;
+    background: #1f2328;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn-light {
+    display: inline-block;
+    border: 1px solid #d0d7de;
+    padding: 12px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #1f2328;
+}
+
+.btn-row {
+    display: flex;
+    gap: 10px;
+}
+
+.extras-block {
+    margin-top: 90px;
+}
+
+.extras-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.extras-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.extra-card {
+    border: 1px solid #d0d7de;
+    border-radius: 10px;
+    padding: 24px;
+    background: #f6f8fa;
+}
+
+@media (max-width: 900px) {
+    .plans-area,
+    .extras-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-heading {
+        font-size: 2.2rem;
+    }
+}
