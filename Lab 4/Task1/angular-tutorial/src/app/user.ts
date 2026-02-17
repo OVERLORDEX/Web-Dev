@@ -1,0 +1,27 @@
+import { Component } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
+
+@Component({
+  selector: 'app-user',
+  standalone: true,
+  template: `
+    <p>Username: {{ username }}</p>
+    <p>Preferred Framework:</p>
+    <ul>
+      <li>
+        Static Image:
+        <img ngSrc="/logo.svg" alt="Angular logo" width="32" height="32" priority />
+      </li>
+      <li>
+        Dynamic Image:
+        <img [ngSrc]="logoUrl" [alt]="logoAlt" width="32" height="32" />
+      </li>
+    </ul>
+  `,
+  imports: [NgOptimizedImage],
+})
+export class User {
+  username = 'youngTech';
+  logoUrl = '/logo.svg';
+  logoAlt = 'Angular logo';
+}
