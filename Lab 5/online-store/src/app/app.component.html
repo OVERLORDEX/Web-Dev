@@ -1,0 +1,33 @@
+<header class="app-header">
+  <div class="logo" (click)="goHome()">
+    <h1>Online <span class="kaspi">Store</span></h1>
+  </div>
+  
+  <div class="categories">
+    @for (category of categories; track category.id) {
+      <button
+        (click)="selectCategory(category.id)"
+        [class.active]="selectedCategoryId === category.id"
+        [style.--button-gradient]="category.gradient"
+        [style.--hover-gradient]="category.gradient">
+        {{ category.name }}
+      </button>
+    }
+  </div>
+</header>
+
+<main>
+  @if (selectedCategoryId) {
+    <app-product-list [products]="products"></app-product-list>
+  } @else {
+    <div class="home-page">
+      <p class="home-welcome">Welcome to Online Store!</p>
+      <div class="home-widgets">
+        <div class="widget">🔥 Hot Deals</div>
+        <div class="widget">🛒 Popular Products</div>
+        <div class="widget">🎁 Promotions</div>
+        <div class="widget">💡 New Arrivals</div>
+      </div>
+    </div>
+  }
+</main>

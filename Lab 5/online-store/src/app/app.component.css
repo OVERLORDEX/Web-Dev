@@ -1,0 +1,135 @@
+/* Базовый стиль для шапки */
+.app-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Логотип слева */
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Логотип Online Store */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.logo h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.logo:hover h1 {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* Градиентная часть "Store" */
+.kaspi {
+  font-weight: 900;
+  background: linear-gradient(90deg, #e60023, #ff3c3c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -moz-background-clip: text; 
+  -moz-text-fill-color: transparent;
+}
+
+/* Категории */
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+/* Кнопки категорий */
+.categories button {
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+  background: var(--button-gradient, #888);
+  transition: all 0.3s ease;
+}
+
+/* Hover эффект для категорий */
+.categories button:hover {
+  background: var(--hover-gradient, linear-gradient(90deg, #e60023, #ff3c3c));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(230,0,35,0.3);
+}
+
+/* Активная категория */
+.categories button.active {
+  box-shadow: 0 4px 12px rgba(230,0,35,0.4);
+  transform: translateY(-2px);
+}
+
+/* Главная страница / виджеты */
+.home-page {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.home-welcome {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.home-widgets {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.home-widgets .widget {
+  background: linear-gradient(135deg, #e60023, #ff3c3c);
+  color: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  font-weight: 600;
+  min-width: 150px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.home-widgets .widget:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(230,0,35,0.3);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .logo h1 {
+    font-size: 24px;
+  }
+  .categories button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  .home-welcome {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo h1 {
+    font-size: 20px;
+  }
+  .categories button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  .home-welcome {
+    font-size: 22px;
+  }
+}

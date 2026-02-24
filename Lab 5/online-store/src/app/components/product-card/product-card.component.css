@@ -86,11 +86,41 @@
   color: #f5a623;
 }
 
+.product-actions {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.product-actions button {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.product-actions button:first-child {
+  background: #e60023;
+  color: #fff;
+}
+
+.product-actions button:last-child {
+  background: #ddd;
+  color: #333;
+}
+
+.product-actions button:hover {
+  opacity: 0.85;
+}
+
 .actions {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-top: auto;
+  margin-top: 15px;
 }
 
 .kaspi-btn {
