@@ -18,7 +18,6 @@ export class AppComponent {
   products: Product[] = [];
 
   constructor(private productService: ProductService) {
-    // Добавляем градиенты к категориям
     this.categories = productService.categories.map(cat => ({
       ...cat,
       gradient: this.getCategoryGradient(cat.name)

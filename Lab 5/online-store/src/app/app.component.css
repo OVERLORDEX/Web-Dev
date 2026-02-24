@@ -1,13 +1,11 @@
-/* Базовый стиль для шапки */
 .app-header {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Логотип слева */
+  align-items: flex-start;
   padding: 20px;
   border-bottom: 1px solid #eee;
 }
 
-/* Логотип Online Store */
 .logo {
   display: flex;
   align-items: center;
@@ -27,7 +25,6 @@
   transition: 0.3s;
 }
 
-/* Градиентная часть "Store" */
 .kaspi {
   font-weight: 900;
   background: linear-gradient(90deg, #e60023, #ff3c3c);
@@ -38,7 +35,6 @@
   -moz-text-fill-color: transparent;
 }
 
-/* Категории */
 .categories {
   display: flex;
   flex-wrap: wrap;
@@ -46,7 +42,6 @@
   margin-bottom: 30px;
 }
 
-/* Кнопки категорий */
 .categories button {
   border: none;
   border-radius: 20px;
@@ -59,20 +54,17 @@
   transition: all 0.3s ease;
 }
 
-/* Hover эффект для категорий */
 .categories button:hover {
   background: var(--hover-gradient, linear-gradient(90deg, #e60023, #ff3c3c));
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(230,0,35,0.3);
 }
 
-/* Активная категория */
 .categories button.active {
   box-shadow: 0 4px 12px rgba(230,0,35,0.4);
   transform: translateY(-2px);
 }
 
-/* Главная страница / виджеты */
 .home-page {
   text-align: center;
   margin-top: 40px;
@@ -107,7 +99,6 @@
   box-shadow: 0 8px 20px rgba(230,0,35,0.3);
 }
 
-/* Адаптивность */
 @media (max-width: 768px) {
   .logo h1 {
     font-size: 24px;
