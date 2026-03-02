@@ -1,0 +1,6 @@
+<div *ngIf="album">
+  <input [(ngModel)]="album.title" />
+  <button (click)="save()">Save</button>
+  <button (click)="back()">Back</button>
+  <button (click)="viewPhotos()">View Photos</button>
+</div>
