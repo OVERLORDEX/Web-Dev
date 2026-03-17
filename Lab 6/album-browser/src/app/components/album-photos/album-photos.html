@@ -1,11 +1,11 @@
-<div class="grid">
-  <img *ngFor="let photo of photos" [src]="photo.thumbnailUrl" />
-</div>
+<div class="card">
+  <button class="back-btn" (click)="back()">← Back</button>
+  <h2 class="title">Photos</h2>
 
-<style>
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 100px);
-  gap: 10px;
-}
-</style>
+  <div class="photo-grid">
+    <div class="photo-card" *ngFor="let photo of photos">
+      <img [src]="photo.thumbnailUrl" [alt]="photo.title" />
+      <div class="photo-title">{{ photo.title }}</div>
+    </div>
+  </div>
+</div>

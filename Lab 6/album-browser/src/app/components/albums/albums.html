@@ -1,11 +1,18 @@
-<div *ngIf="loading">Loading albums...</div>
+<div *ngIf="loading" class="loading">Loading albums...</div>
 
-<div *ngIf="!loading">
-  <ul>
-    <li *ngFor="let album of albums">
-      {{ album.title }}
-      <button (click)="deleteAlbum(album.id)">Delete</button>
-      <a [routerLink]="['/albums', album.id]">View</a>
+<div *ngIf="!loading" class="card">
+  <h2 class="title">Albums</h2>
+
+  <ul class="album-list">
+    <li class="album-item" *ngFor="let album of albums">
+      <a class="album-title" [routerLink]="['/albums', album.id]">
+        {{ album.id }} - {{ album.title }}
+      </a>
+
+      <div class="album-actions">
+        <button class="delete-btn" (click)="deleteAlbum(album.id)">Delete</button>
+        <a class="view-link" [routerLink]="['/albums', album.id]">View Details</a>
+      </div>
     </li>
   </ul>
 </div>

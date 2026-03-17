@@ -1,0 +1,47 @@
+.loading { text-align:center; padding:20px; }
+
+.card{
+  background:#fff;
+  border-radius:14px;
+  padding:24px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+}
+
+.title{ margin:0 0 16px 0; }
+
+.album-list{ list-style:none; padding:0; margin:0; }
+
+.album-item{
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:14px;
+}
+
+.album-item:hover{ background:#f8f9fa; }
+
+.album-title{
+  color:#2c3e50;
+  text-decoration:none;
+  flex:1;
+}
+
+.album-title:hover{ text-decoration:underline; }
+
+.album-actions{ display:flex; gap:10px; align-items:center; }
+
+.delete-btn{
+  background:#e74c3c;
+  color:white;
+  border:none;
+  padding:6px 10px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.delete-btn:hover{ background:#c0392b; }
+
+.view-link{ color:#2b76b8; text-decoration:none; }
+.view-link:hover{ text-decoration:underline; }

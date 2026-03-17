@@ -8,16 +8,8 @@ import { CommonModule } from '@angular/common';
   selector: 'app-albums',
   standalone: true,
   imports: [CommonModule, RouterModule],
-  template: `
-    <div *ngIf="loading">Loading albums...</div>
-    <ul *ngIf="!loading">
-      <li *ngFor="let album of albums">
-        {{ album.id }} - {{ album.title }}
-        <button (click)="deleteAlbum(album.id)">Delete</button>
-        <a [routerLink]="['/albums', album.id]">View Details</a>
-      </li>
-    </ul>
-  `
+  templateUrl: './albums.html',
+  styleUrls: ['./albums.css']
 })
 export class Albums implements OnInit {
   albums: Album[] = [];

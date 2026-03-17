@@ -5,16 +5,7 @@ import { RouterModule } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [RouterModule],
-  template: `
-    <nav>
-      <a routerLink="/home" routerLinkActive="active">Home</a>
-      <a routerLink="/about" routerLinkActive="active">About</a>
-      <a routerLink="/albums" routerLinkActive="active">Albums</a>
-    </nav>
-
-    <hr>
-
-    <router-outlet></router-outlet>
-  `
+  templateUrl: './app.html',
+  styleUrls: ['./app.css']
 })
 export class App {}

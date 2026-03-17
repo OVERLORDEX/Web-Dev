@@ -1,6 +1,15 @@
-<div *ngIf="album">
+<div *ngIf="album" class="card">
+  <button class="back-btn" (click)="back()">← Back to List</button>
+
+  <h2 class="title">Edit Album #{{ album.id }}</h2>
+
+  <p class="muted">User ID: {{ album.userId }}</p>
+
+  <label>Album Title:</label>
   <input [(ngModel)]="album.title" />
-  <button (click)="save()">Save</button>
-  <button (click)="back()">Back</button>
-  <button (click)="viewPhotos()">View Photos</button>
+
+  <div class="button-group">
+    <button class="save-btn" (click)="save()">Save Changes</button>
+    <button class="photos-btn" (click)="viewPhotos()">View Photos</button>
+  </div>
 </div>

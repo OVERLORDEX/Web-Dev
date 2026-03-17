@@ -8,27 +8,8 @@ import { CommonModule } from '@angular/common';
   selector: 'app-album-photos',
   standalone: true,
   imports: [CommonModule],
-  template: `
-    <div *ngIf="photos.length === 0">Loading photos...</div>
-    <div class="grid">
-      <div *ngFor="let p of photos">
-        <img [src]="p.thumbnailUrl" [alt]="p.title" />
-        <p>{{ p.title }}</p>
-      </div>
-    </div>
-    <button (click)="back()">Back</button>
-  `,
-  styles: [`
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, 150px);
-      gap: 10px;
-    }
-    img {
-      width: 100%;
-      display: block;
-    }
-  `]
+  templateUrl: './album-photos.html',
+  styleUrls: ['./album-photos.css']
 })
 export class AlbumPhotos implements OnInit {
   photos: Photo[] = [];

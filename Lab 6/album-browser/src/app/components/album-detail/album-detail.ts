@@ -9,16 +9,8 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-album-detail',
   standalone: true,
   imports: [CommonModule, FormsModule, RouterModule],
-  template: `
-    <div *ngIf="album">
-      <h2>Album {{ album.id }}</h2>
-      <p>User ID: {{ album.userId }}</p>
-      <input [(ngModel)]="album.title" />
-      <button (click)="save()">Save</button>
-      <button (click)="back()">Back</button>
-      <button (click)="viewPhotos()">View Photos</button>
-    </div>
-  `
+  templateUrl: './album-detail.html',
+  styleUrls: ['./album-detail.css']
 })
 export class AlbumDetail implements OnInit {
   album!: Album;
