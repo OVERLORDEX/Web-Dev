@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://127.0.0.1:8000/api/categories/8/
+method: DELETE
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Updated Category\"\r
+
+    }"
+order: 4492516472868264

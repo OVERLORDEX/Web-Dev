@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://127.0.0.1:8000/api/categories/
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Test Category\"\r
+
+    }"
+order: 4390711688656166
